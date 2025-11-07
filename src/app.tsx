@@ -1,5 +1,10 @@
 import BowImage from "./assets/img/bow.png";
 
+// import FacebookIcon from "./assets/img/facebook.svg";
+// import InstagramIcon from "./assets/img/instagram.svg";
+// import QRCode from "./assets/img/qr.png";
+// import TikTokIcon from "./assets/img/tiktok.svg";
+
 const App = () => {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center gap-10">
@@ -168,8 +173,9 @@ const App = () => {
           </div>
         </div>
       </div> */}
+      {/* Nail Card */}
       <div
-        className="aspect-8/10 w-1/3 p-10"
+        className="h-[715px] w-[570px] p-10"
         style={{
           backgroundColor: "#FCEEF3",
           backgroundImage: `
