@@ -1,13 +1,10 @@
-import FacebookIcon from "./assets/img/facebook.svg";
-import InstagramIcon from "./assets/img/instagram.svg";
-import QRCode from "./assets/img/qr.png";
-import TikTokIcon from "./assets/img/tiktok.svg";
+import BowImage from "./assets/img/bow.png";
 
 const App = () => {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center gap-10">
       {/* Business Card Front */}
-      <div className="relative h-[326px] w-[525px] overflow-hidden border border-gray-300">
+      {/* <div className="relative h-[326px] w-[525px] overflow-hidden border border-gray-300">
         <svg className="absolute inset-0 h-full w-full" style={{ opacity: 0 }}>
           <defs>
             <filter id="raggedy-edge" x="-50%" y="-50%" width="200%" height="200%">
@@ -137,9 +134,9 @@ const App = () => {
             set your new path in this month
           </span>
         </div>
-      </div>
+      </div> */}
       {/* Business Card Back */}
-      <div className="flex h-[326px] w-[525px] flex-col items-start justify-between border border-gray-300 p-10">
+      {/* <div className="flex h-[326px] w-[525px] flex-col items-start justify-between border border-gray-300 p-10">
         <span className="w-full text-center font-great-vibes font-medium text-[48px] leading-[48px]">
           Thank you for your order
         </span>
@@ -169,6 +166,28 @@ const App = () => {
               </span>
             </div>
           </div>
+        </div>
+      </div> */}
+      <div
+        className="aspect-8/10 w-1/3 p-10"
+        style={{
+          backgroundColor: "#FCEEF3",
+          backgroundImage: `
+            linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0 14px, transparent 14px 28px),
+            linear-gradient(90deg, rgba(255, 182, 193, 0.45) 0 14px, transparent 14px 28px),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.9) 0 14px, transparent 14px 28px),
+            linear-gradient(0deg, rgba(255, 182, 193, 0.45) 0 14px, transparent 14px 28px)
+          `,
+          backgroundSize: "28px 28px",
+          backgroundPosition: "0 0, 0 14px, 0 0, 14px 0",
+          backgroundBlendMode: "multiply",
+        }}
+      >
+        <div className="relative h-full w-full rounded-4xl border-2 border-black bg-white p-10">
+          <img src={BowImage} alt="Bow" className="-top-25 -right-10 absolute w-1/2 rotate-[12.5deg]" />
+          <span className="w-full text-center font-great-vibes font-medium text-[45px] leading-[45px]">
+            Bend the Trend
+          </span>
         </div>
       </div>
     </div>
