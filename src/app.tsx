@@ -5,6 +5,20 @@ import BowImage from "./assets/img/bow.png";
 // import QRCode from "./assets/img/qr.png";
 // import TikTokIcon from "./assets/img/tiktok.svg";
 
+const weavePatternSvg = encodeURIComponent(`
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+    <defs>
+      <pattern id="weave" patternUnits="userSpaceOnUse" width="28" height="28">
+        <rect width="14" height="28" fill="#FFB6C1" fill-opacity="0.45"/>
+        <rect x="14" width="14" height="28" fill="transparent"/>
+        <rect width="28" height="14" fill="#FFB6C1" fill-opacity="0.45" />
+        <rect y="14" width="28" height="14" fill="transparent"/>
+      </pattern>
+    </defs>
+    <rect width="28" height="28" fill="url(#weave)"/>
+  </svg>
+`);
+
 const App = () => {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center gap-10">
@@ -178,15 +192,8 @@ const App = () => {
         className="h-[715px] w-[570px] p-10"
         style={{
           backgroundColor: "#FCEEF3",
-          backgroundImage: `
-            linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0 14px, transparent 14px 28px),
-            linear-gradient(90deg, rgba(255, 182, 193, 0.45) 0 14px, transparent 14px 28px),
-            linear-gradient(0deg, rgba(255, 255, 255, 0.9) 0 14px, transparent 14px 28px),
-            linear-gradient(0deg, rgba(255, 182, 193, 0.45) 0 14px, transparent 14px 28px)
-          `,
+          backgroundImage: `url("data:image/svg+xml,${weavePatternSvg}")`,
           backgroundSize: "28px 28px",
-          backgroundPosition: "0 0, 0 14px, 0 0, 14px 0",
-          backgroundBlendMode: "multiply",
         }}
       >
         <div className="relative h-full w-full rounded-4xl border-2 border-black bg-white p-10">
